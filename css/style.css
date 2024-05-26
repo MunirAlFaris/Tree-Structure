@@ -1,0 +1,158 @@
+*  {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+*:focus {
+  outline: none;
+}
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+.battleField {
+  margin: 0 20px 40px;
+}
+.battleField > div {
+  margin-left: 30px;
+}
+
+.btn {
+  position: absolute;
+  left: -25px;
+  top: 12px;
+  background-color: #999;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 999;
+}
+.m-l-40 {
+  margin-left: 40px;
+}
+.btn.btn-empty {
+  pointer-events: none;
+}
+.btn-empty::before {
+  content: "";
+  position: absolute;
+  background-color: #999;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+}
+.entry > div:first-child {
+  position: relative;
+  padding-top: 10px;
+}
+.entry > div:first-child span {
+  margin-left: 4px;
+  color: #666;
+  padding: 3.5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.entry > div:first-child span:first-child, span:nth-child(2), span:nth-child(3) {
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+.entry > div:first-child span:nth-child(2) {
+  color: lightgreen;
+  border-color: lightgreen;
+  pointer-events: none;
+  user-select: none;
+}
+.entry > div:first-child span:nth-child(3) {
+  color: tomato;
+  border-color: tomato;
+  pointer-events: none;
+  user-select: none;
+}
+.entry > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.entry div p {
+  padding: 5px 0;
+}
+.form-inline {
+  display: flex;
+  border: 1px solid black;
+  width: fit-content;
+  border-radius: 5px;
+}
+.form-inline input[type = "submit"] {
+  background-color: #666;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+.form-inline input[type = "text"] {
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 5px 5px 0 5px;
+}
+
+/* Start */
+.hide {
+  display: none;
+}
+.line {
+  position: relative;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: calc(100% + 20px);
+  background-color: black;
+  left: -20px;
+  top: 20px;
+}
+.m-l-40.line::before {
+  left: -60px;
+  top: 10px;
+  height: 100%;
+}
+.line-w::after {
+  content: "";
+  width: 40px;
+  height: 23px;
+  position: absolute;
+  left: -60px;
+  top: -5px;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+  border-bottom-left-radius: 12px;
+}
+.btn-opened::before {
+  content: "-";
+  position: absolute;
+  background-color: #999;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
